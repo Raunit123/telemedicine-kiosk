@@ -36,13 +36,16 @@ app.use('/api/auth/signup', signupLimiter);
 app.use('/api/auth', authRoutes);
 app.use('/api/ai-assistant', aiAssistantRoutes);
 
-// MongoDB Connection
+// MongoDB Connection with Enhanced Error Handling
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
   .then(() => console.log('✅ MongoDB connected'))
-  .catch((err) => console.error('❌ MongoDB connection error:', err));
+  .catch((err) => {
+    console.error('❌ MongoDB connection error:', err);
+    process.exit(1); // Exit process if DB connection fails
+  });
 
 // Health check route
 app.get('/', (req, res) => {
@@ -50,7 +53,12 @@ app.get('/', (req, res) => {
 });
 
 // 📄 Serve dynamically generated prescriptions
-const prescriptionsDir = path.join(__dirname, '../ai-services'); // Ensure this folder exists
+const prescriptionsDir = path.join(__dirname, '../ai-services');
+
+// Ensure the directory exists
+if (!fs.existsSync(prescriptionsDir)) {
+  fs.mkdirSync(prescriptionsDir, { recursive: true });
+}
 
 app.get('/api/prescription/download', (req, res) => {
   const prescriptionPath = path.join(prescriptionsDir, 'prescription.pdf');
@@ -61,7 +69,7 @@ app.get('/api/prescription/download', (req, res) => {
 
   res.download(prescriptionPath, 'prescription.pdf', (err) => {
     if (err) {
-      console.error('Error sending prescription:', err);
+      console.error('❌ Error sending prescription:', err);
       res.status(500).json({ error: 'Failed to download prescription' });
     }
   });
@@ -69,4 +77,14 @@ app.get('/api/prescription/download', (req, res) => {
 
 // Start Server
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+const server = app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+
+// Graceful Shutdown Handling
+process.on('SIGINT', async () => {
+  console.log('🛑 Shutting down server...');
+  await mongoose.disconnect();
+  server.close(() => {
+    console.log('✅ Server closed.');
+    process.exit(0);
+  });
+});

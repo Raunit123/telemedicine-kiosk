@@ -1,13 +1,23 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #040725; /* Optional: Background color */
+}
+
 .chat-container {
-  width: 420px;
+  width: 800px;
   height: 500px;
   display: flex;
   flex-direction: column;
-  background: #ffffff;
+  background: #1f2134;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
+
 
 .chat-box {
   flex: 1;
@@ -18,22 +28,34 @@
 }
 
 .input-container {
+  
   display: flex;
   padding: 10px;
-  background: #fff;
-  border-top: 1px solid #ddd;
+  
+  border-top: 1px solid #363849;
+  width: 80%;
+  padding: 0.75rem;
+  border: none;
+  
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  
+  backdrop-filter: blur(10px);
+  color: #363849;
 }
 
 .mic-button {
   margin-left: 10px;
-  background: #007bff;
-  color: white;
+  background: #363849;
+  color: rgb(193, 193, 220);
   border: none;
   padding: 8px 12px;
   border-radius: 50%;
   cursor: pointer;
+  margin-right: 30px;
 }
 
 .mic-button.listening {
   background: #ff4d4d;
+  margin-right: 10px;
 }

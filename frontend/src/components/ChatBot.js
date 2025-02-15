@@ -63,6 +63,7 @@ const ChatBot = () => {
           { sender: "bot", text: botResponse.error },
         ]);
       } else {
+        
         setMessages((prev) => [
           ...prev,
           { sender: "bot", text: botResponse.response },
@@ -95,6 +96,7 @@ const ChatBot = () => {
       </div>
 
       <div className="input-container">
+        
         <Input onSendMessage={sendMessage} loading={loading} />
         <button
           className={`mic-button ${listening ? "listening" : ""}`}

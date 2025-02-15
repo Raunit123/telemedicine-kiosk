@@ -53,9 +53,10 @@ const Doctors = () => {
                 Join Meet
               </a>
             ) : (
-              <button className="meet-button disabled" disabled>
+              <button className="meet-button disabled" disabled style={{ backgroundColor: "gray", color: "white" }}>
                 Unavailable
               </button>
+
             )}
           </div>
         ))}

@@ -20,7 +20,8 @@
     "react-pdf": "^6.0.0",
     "react-phone-number-input": "^3.4.11",
     "react-router-dom": "^6.29.0",
-    "react-scripts": "5.0.1"
+    "react-scripts": "5.0.1",
+    "vosk-browser": "^0.0.8"
   },
   "scripts": {
     "start": "react-scripts start",

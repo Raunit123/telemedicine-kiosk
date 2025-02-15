@@ -1,43 +1,54 @@
 /* Overall page container with a refined gradient background */
 .appointment-page {
+  
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  
   min-height: 100vh;
 }
 
 /* Card container for the booking section with transparency and blur effect */
 .appointment-card {
-  background: rgba(255, 255, 255, 0.85); /* semi-transparent white */
-  backdrop-filter: blur(8px);
+  
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  
   padding: 2rem;
   width: 100%;
+  
+  
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  
   max-width: 500px;
   border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .appointment-card:hover {
+  
   transform: translateY(-5px);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
 }
 
 /* Title styling for the card */
 .card-title {
+  
   margin-bottom: 1.5rem;
   font-size: 1.8rem;
-  color: #5563DE;
+  color: #eeeff7;
 }
 
 /* Styling for the time slot selection label */
 .slot-label {
   display: block;
   font-size: 1.2rem;
-  color: #333;
+  color: #f1eeee;
   margin-bottom: 0.5rem;
   text-align: left;
   font-weight: 600;
@@ -64,6 +75,7 @@
 
 /* Styling for the booking button */
 .book-button {
+  text-align: center;
   width: 100%;
   padding: 0.75rem;
   font-size: 1.1rem;
@@ -72,6 +84,7 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  align-items: center;
   margin-top: 1rem;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }

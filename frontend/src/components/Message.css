@@ -15,9 +15,16 @@
 }
 
 .message.user .message-bubble {
-  background: #007bff;
+  width: 20%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  
   color: white;
-  text-align: right;
+  text-align: left;
 }
 
 .message.bot {
@@ -25,7 +32,14 @@
 }
 
 .message.bot .message-bubble {
-  background: #f1f1f1;
-  color: black;
+  width: auto;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  
+  color: white;
   text-align: left;
 }

@@ -48,7 +48,7 @@ function Navbar() {
 
       {/* Center Section: Navigation Links */}
       <div className="center-section">
-        <h2 className="navbar-title">स्वास्थ्य कियोस्क</h2>
+        <h2 className="navbar-title">Health kiosk</h2>
         <ul className="nav-links">
           <li>
             <Link to="/ai-assistant">AI Assistant</Link>
@@ -69,7 +69,7 @@ function Navbar() {
           onClick={handleLogout}
           className="logout-button"
         >
-          अब बाहर निकलें
+          Logout
         </Button>
       </div>
     </nav>

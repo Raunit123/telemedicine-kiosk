@@ -5,8 +5,9 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: url('./images/login_bg.jpg') no-repeat center center;
-  background-size: cover;
+  background: url('./images/login_bg.jpg') ;
+  background-position: 60px;
+  width: 2000px;
   color: #ffffff;
   padding: 20px;
 }
