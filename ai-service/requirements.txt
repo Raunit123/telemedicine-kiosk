@@ -1,0 +1,12 @@
+langgraph 
+langchain
+langchain-community
+langchain-groq
+langchain-core
+langchain-huggingface
+elevenlabs
+python-dotenv
+typing-extensions
+SpeechRecognition
+chromadb
+mpv
