@@ -1,0 +1,12 @@
+Doctor's Name: Dr. John Doe  
+Patient Name: Not Available  
+Age: Not Available  
+Gender: Not Available  
+Date: 2025-02-14 17:25 PM  
+Symptoms: Fever, Headache, Body Pain  
+Diagnosis: Viral Infection  
+Prescribed Medications:  
+1. Paracetamol - 500mg - Twice a day  
+2. None  
+Additional Advice: Drink plenty of fluids, get enough rest, and monitor your symptoms. If they worsen or persist, consult the doctor immediately.  
+Follow Up: Not Available
