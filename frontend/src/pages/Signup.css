@@ -1,0 +1,78 @@
+/* Signup.css */
+.rural-signup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: url('./images/login_bg.jpg') no-repeat center center;
+  background-size: cover;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.rural-signup-container form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 2rem;
+  max-width: 500px;
+  text-align: left;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Ensure dropdown fits properly */
+.form-group select {
+  width: 110%; /* Makes sure it takes full width */
+  padding: 12px; /* Adjust padding for better spacing */
+  border-radius: 5px;
+  
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 5%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgb(220, 215, 215);
+}
+
+/* Fixing alignment issues in the grid */
+.form-group:nth-child(1) { /* Targeting the gender field */
+  grid-column: span 2; /* Makes it take full width in the grid */
+}
+
+.submit-button {
+  grid-column: span 2;
+  width: 100%;
+}
+/* .login-prompt {
+  color: #7289da;
+  text-decoration: none;
+  font-weight: bold;
+} */
+
+/* Signup Prompt */
+.login-prompt {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.login-prompt a {
+  color: #7289da;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-prompt a:hover {
+  text-decoration: underline;
+}
