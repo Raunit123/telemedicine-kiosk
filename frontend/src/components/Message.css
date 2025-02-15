@@ -1,0 +1,45 @@
+.message {
+  display: flex;
+  margin: 8px 0;
+}
+
+.message-bubble {
+  max-width: 75%;
+  padding: 10px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.message.user {
+  justify-content: flex-end;
+}
+
+.message.user .message-bubble {
+  width: 20%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  
+  color: white;
+  text-align: left;
+}
+
+.message.bot {
+  justify-content: flex-start;
+}
+
+.message.bot .message-bubble {
+  width: auto;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  
+  color: white;
+  text-align: left;
+}

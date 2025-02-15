@@ -1,0 +1,154 @@
+
+
+
+/* Global container for the login page with a dark, futuristic gradient background */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  min-height: 100vh;
+  background: url('./images/login_bg.jpg') ;
+  background-position: 60px;
+  
+  width: 2000px;
+  color: #ffffff;
+}
+
+
+/* Card container for the login form with glassmorphic effect */
+.login-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Login Heading */
+.local-language-heading {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+/* Form styling */
+.login-form {
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  width: 93%;
+}
+
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #ddd;
+}
+
+/* Input Fields with Glass Effect */
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border: 1px solid #7289da;
+  box-shadow: 0 0 8px rgba(114, 137, 218, 0.7);
+}
+
+/* Sign-in Button */
+.submit-button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  background: linear-gradient(135deg, #7289da, #5563DE);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background: linear-gradient(135deg, #5563DE, #4350b0);
+}
+
+/* Google Sign-in Button */
+.google-signin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 0.75rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.3s ease;
+}
+
+.google-signin:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.google-signin img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+/* Signup Prompt */
+.signup-prompt {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.signup-prompt a {
+  color: #7289da;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-prompt a:hover {
+  text-decoration: underline;
+}
+
+/* Error Message Styling */
+.error-message {
+  background: rgba(255, 50, 50, 0.2);
+  color: #ff4d4d;
+  padding: 0.75rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Offline Warning Banner */
+.offline-banner {
+  background: rgba(255, 193, 7, 0.2);
+  color: #ffcc00;
+  border: 1px solid rgba(255, 193, 7, 0.4);
+  padding: 0.75rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
